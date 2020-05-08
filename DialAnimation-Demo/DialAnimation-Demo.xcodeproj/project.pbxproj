@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7C2F0E424657DD000BB44DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0E324657DD000BB44DB /* AppDelegate.m */; };
-		F7C2F0E724657DD000BB44DB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0E624657DD000BB44DB /* SceneDelegate.m */; };
-		F7C2F0EA24657DD000BB44DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0E924657DD000BB44DB /* ViewController.m */; };
-		F7C2F0ED24657DD000BB44DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F0EB24657DD000BB44DB /* Main.storyboard */; };
-		F7C2F0EF24657DD100BB44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F0EE24657DD100BB44DB /* Assets.xcassets */; };
-		F7C2F0F224657DD100BB44DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F0F024657DD100BB44DB /* LaunchScreen.storyboard */; };
-		F7C2F0F524657DD100BB44DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0F424657DD100BB44DB /* main.m */; };
+		F7C2F0EA24657DD000BB44DB /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0E924657DD000BB44DB /* DemoViewController.m */; };
 		F7C2F0FF24657DD100BB44DB /* DialAnimation_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0FE24657DD100BB44DB /* DialAnimation_DemoTests.m */; };
 		F7C2F10A24657DD100BB44DB /* DialAnimation_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F10924657DD100BB44DB /* DialAnimation_DemoUITests.m */; };
+		F7C2F12424657E3300BB44DB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F11A24657E3300BB44DB /* SceneDelegate.m */; };
+		F7C2F12724657E3300BB44DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F11F24657E3300BB44DB /* main.m */; };
+		F7C2F12824657E3300BB44DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F12024657E3300BB44DB /* AppDelegate.m */; };
+		F7C2F12B24657F2D00BB44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11924657E3300BB44DB /* Assets.xcassets */; };
+		F7C2F12C24657F3100BB44DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11B24657E3300BB44DB /* LaunchScreen.storyboard */; };
+		F7C2F12D24657F3500BB44DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11D24657E3300BB44DB /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,23 +37,23 @@
 
 /* Begin PBXFileReference section */
 		F7C2F0DF24657DD000BB44DB /* DialAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DialAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7C2F0E224657DD000BB44DB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F7C2F0E324657DD000BB44DB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F7C2F0E524657DD000BB44DB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		F7C2F0E624657DD000BB44DB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		F7C2F0E824657DD000BB44DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F7C2F0E924657DD000BB44DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		F7C2F0EC24657DD000BB44DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F7C2F0EE24657DD100BB44DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F7C2F0F124657DD100BB44DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F7C2F0F324657DD100BB44DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7C2F0F424657DD100BB44DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7C2F0E824657DD000BB44DB /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		F7C2F0E924657DD000BB44DB /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		F7C2F0FA24657DD100BB44DB /* DialAnimation-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DialAnimation-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C2F0FE24657DD100BB44DB /* DialAnimation_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialAnimation_DemoTests.m; sourceTree = "<group>"; };
 		F7C2F10024657DD100BB44DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7C2F10524657DD100BB44DB /* DialAnimation-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DialAnimation-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C2F10924657DD100BB44DB /* DialAnimation_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialAnimation_DemoUITests.m; sourceTree = "<group>"; };
 		F7C2F10B24657DD100BB44DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C2F11824657E3300BB44DB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F7C2F11924657E3300BB44DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7C2F11A24657E3300BB44DB /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		F7C2F11C24657E3300BB44DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7C2F11E24657E3300BB44DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7C2F11F24657E3300BB44DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7C2F12024657E3300BB44DB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F7C2F12124657E3300BB44DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7C2F12224657E3300BB44DB /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +104,9 @@
 		F7C2F0E124657DD000BB44DB /* DialAnimation-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				F7C2F0E224657DD000BB44DB /* AppDelegate.h */,
-				F7C2F0E324657DD000BB44DB /* AppDelegate.m */,
-				F7C2F0E524657DD000BB44DB /* SceneDelegate.h */,
-				F7C2F0E624657DD000BB44DB /* SceneDelegate.m */,
-				F7C2F0E824657DD000BB44DB /* ViewController.h */,
-				F7C2F0E924657DD000BB44DB /* ViewController.m */,
-				F7C2F0EB24657DD000BB44DB /* Main.storyboard */,
-				F7C2F0EE24657DD100BB44DB /* Assets.xcassets */,
-				F7C2F0F024657DD100BB44DB /* LaunchScreen.storyboard */,
-				F7C2F0F324657DD100BB44DB /* Info.plist */,
-				F7C2F0F424657DD100BB44DB /* main.m */,
+				F7C2F11724657E3300BB44DB /* SupportingFiles */,
+				F7C2F0E824657DD000BB44DB /* DemoViewController.h */,
+				F7C2F0E924657DD000BB44DB /* DemoViewController.m */,
 			);
 			path = "DialAnimation-Demo";
 			sourceTree = "<group>";
@@ -135,6 +127,22 @@
 				F7C2F10B24657DD100BB44DB /* Info.plist */,
 			);
 			path = "DialAnimation-DemoUITests";
+			sourceTree = "<group>";
+		};
+		F7C2F11724657E3300BB44DB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F11824657E3300BB44DB /* AppDelegate.h */,
+				F7C2F12024657E3300BB44DB /* AppDelegate.m */,
+				F7C2F11924657E3300BB44DB /* Assets.xcassets */,
+				F7C2F12224657E3300BB44DB /* SceneDelegate.h */,
+				F7C2F11A24657E3300BB44DB /* SceneDelegate.m */,
+				F7C2F11B24657E3300BB44DB /* LaunchScreen.storyboard */,
+				F7C2F11D24657E3300BB44DB /* Main.storyboard */,
+				F7C2F11F24657E3300BB44DB /* main.m */,
+				F7C2F12124657E3300BB44DB /* Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +248,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C2F0F224657DD100BB44DB /* LaunchScreen.storyboard in Resources */,
-				F7C2F0EF24657DD100BB44DB /* Assets.xcassets in Resources */,
-				F7C2F0ED24657DD000BB44DB /* Main.storyboard in Resources */,
+				F7C2F12D24657F3500BB44DB /* Main.storyboard in Resources */,
+				F7C2F12C24657F3100BB44DB /* LaunchScreen.storyboard in Resources */,
+				F7C2F12B24657F2D00BB44DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,10 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C2F0EA24657DD000BB44DB /* ViewController.m in Sources */,
-				F7C2F0E424657DD000BB44DB /* AppDelegate.m in Sources */,
-				F7C2F0F524657DD100BB44DB /* main.m in Sources */,
-				F7C2F0E724657DD000BB44DB /* SceneDelegate.m in Sources */,
+				F7C2F12824657E3300BB44DB /* AppDelegate.m in Sources */,
+				F7C2F0EA24657DD000BB44DB /* DemoViewController.m in Sources */,
+				F7C2F12724657E3300BB44DB /* main.m in Sources */,
+				F7C2F12424657E3300BB44DB /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,20 +314,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F7C2F0EB24657DD000BB44DB /* Main.storyboard */ = {
+		F7C2F11B24657E3300BB44DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F7C2F0EC24657DD000BB44DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F7C2F0F024657DD100BB44DB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F7C2F0F124657DD100BB44DB /* Base */,
+				F7C2F11C24657E3300BB44DB /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F7C2F11D24657E3300BB44DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C2F11E24657E3300BB44DB /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -375,6 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -427,6 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -441,7 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R34S373N7;
-				INFOPLIST_FILE = "DialAnimation-Demo/Info.plist";
+				INFOPLIST_FILE = "DialAnimation-Demo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R34S373N7;
-				INFOPLIST_FILE = "DialAnimation-Demo/Info.plist";
+				INFOPLIST_FILE = "DialAnimation-Demo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

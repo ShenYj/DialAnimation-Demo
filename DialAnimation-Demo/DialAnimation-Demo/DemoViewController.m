@@ -6,13 +6,13 @@
 //  Copyright © 2020 ShenYj. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DemoViewController.h"
 
-@interface ViewController ()
+@interface DemoViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DemoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
