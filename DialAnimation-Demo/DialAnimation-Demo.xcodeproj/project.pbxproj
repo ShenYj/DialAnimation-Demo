@@ -16,6 +16,7 @@
 		F7C2F12B24657F2D00BB44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11924657E3300BB44DB /* Assets.xcassets */; };
 		F7C2F12C24657F3100BB44DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11B24657E3300BB44DB /* LaunchScreen.storyboard */; };
 		F7C2F12D24657F3500BB44DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11D24657E3300BB44DB /* Main.storyboard */; };
+		F7C2F134246582F100BB44DB /* DialAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F133246582F100BB44DB /* DialAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		F7C2F12024657E3300BB44DB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F7C2F12124657E3300BB44DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7C2F12224657E3300BB44DB /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		F7C2F132246582F100BB44DB /* DialAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialAnimationView.h; sourceTree = "<group>"; };
+		F7C2F133246582F100BB44DB /* DialAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		F7C2F0E124657DD000BB44DB /* DialAnimation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F7C2F131246582D400BB44DB /* DialAnimation */,
 				F7C2F11724657E3300BB44DB /* SupportingFiles */,
 				F7C2F0E824657DD000BB44DB /* DemoViewController.h */,
 				F7C2F0E924657DD000BB44DB /* DemoViewController.m */,
@@ -143,6 +147,15 @@
 				F7C2F12124657E3300BB44DB /* Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F7C2F131246582D400BB44DB /* DialAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F132246582F100BB44DB /* DialAnimationView.h */,
+				F7C2F133246582F100BB44DB /* DialAnimationView.m */,
+			);
+			path = DialAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C2F134246582F100BB44DB /* DialAnimationView.m in Sources */,
 				F7C2F12824657E3300BB44DB /* AppDelegate.m in Sources */,
 				F7C2F0EA24657DD000BB44DB /* DemoViewController.m in Sources */,
 				F7C2F12724657E3300BB44DB /* main.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "DemoViewController.h"
+#import "DialAnimationView.h"
 
 @interface DemoViewController ()
 
