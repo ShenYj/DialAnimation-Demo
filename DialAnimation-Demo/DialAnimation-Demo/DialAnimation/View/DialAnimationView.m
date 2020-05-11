@@ -28,6 +28,8 @@
 
 @property (nonatomic, strong) NSArray <DialAnimationModel *> *dataSources;
 
+@property (nonatomic, strong) UIImageView *centerLogoImageView;
+
 
 @end
 
@@ -46,7 +48,8 @@
 {
     self.backgroundColor = [UIColor clearColor];
     self.clipsToBounds   = YES;
-
+    [self addSubview:self.centerLogoImageView];
+    
     UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self
                                                                                        action:@selector(targetForSwipeGesture:)];
     swipeGesture.direction                 = UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionLeft | UISwipeGestureRecognizerDirectionUp | UISwipeGestureRecognizerDirectionDown;
@@ -122,20 +125,33 @@
 
     // b2 = a2 + c2 - 2ac Cos(B)
     CGFloat diagonal = sqrt((powf(_innerRadius, 2) + powf(_innerRadius, 2)) - 2*_innerRadius*_innerRadius*cos(angle));
-
+    
     for (int i = 0; i < self.dataSources.count; i ++) {
         DialAnimationModel *model          = self.dataSources[i];
         SectorView *rectangleBGView        = [[SectorView alloc] initWithSize:CGSizeMake(diagonal, _innerRadius) angle:angle];
-        rectangleBGView.backgroundColor    = [UIColor randomColor];
+        rectangleBGView.backgroundColor    = (i % 2 == 0) ? [UIColor rgba:4325678964] : [UIColor rgba:4278190335];
         rectangleBGView.center             = centerPoint;
         rectangleBGView.transform          = CGAffineTransformMakeRotation(angle * i);
         rectangleBGView.model              = model;
         [self addSubview:rectangleBGView];
     }
+    
+    self.centerLogoImageView.bounds = CGRectMake(0, 0, 120, 120);
+    self.centerLogoImageView.center = centerPoint;
+    [self bringSubviewToFront:self.centerLogoImageView];
 }
 
 
 #pragma mark - lazy
+
+- (UIImageView *)centerLogoImageView {
+    if (!_centerLogoImageView) {
+        _centerLogoImageView             = [[UIImageView alloc] init];
+        _centerLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _centerLogoImageView.image       = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"developer.png" ofType:nil]];
+    }
+    return _centerLogoImageView;
+}
 
 - (NSArray <DialAnimationModel *> *)dataSources {
     if (!_dataSources) {

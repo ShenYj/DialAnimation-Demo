@@ -8,6 +8,8 @@
 
 #import "CurvedView.h"
 
+CGFloat const kItemHeight = 25.f;  /// 高度
+
 @interface CurvedView ()
 
 @property (nonatomic, strong) UILabel *contentLabel;

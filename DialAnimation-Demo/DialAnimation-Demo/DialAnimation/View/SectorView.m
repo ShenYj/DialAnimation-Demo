@@ -103,7 +103,7 @@
 - (CurvedView *)hourView {
     if (!_hourView) {
         _hourView                 = [[CurvedView alloc] init];
-        _hourView.frame           = CGRectMake(0, 25, _size.width, _size.height - _acupointView.frame.origin.y - 25);
+        _hourView.frame           = CGRectMake(0, kItemHeight, _size.width, _size.height - _acupointView.frame.origin.y - kItemHeight);
         _hourView.angle           = _angle;
         _hourView.backgroundColor = [UIColor randomColor];
     }
