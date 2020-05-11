@@ -136,7 +136,7 @@
         curvedView.frame             = CGRectMake(0, 0, smallDiagonal, viewHeight);
         curvedView.center            = centerPoint;
         curvedView.angle             = smallDiagonal;
-        curvedView.backgroundColor   = (i % 2 == 0) ? [UIColor rgba:4325678964] : [UIColor rgba:4278190335];
+        curvedView.backgroundColor   = [UIColor rgb:71 green:77 blue:89 alpha:1.0];
         curvedView.text              = hourString;
         curvedView.transform         = CGAffineTransformMakeRotation(smalAngle * i);
         [self addSubview:curvedView];
