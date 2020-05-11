@@ -25,11 +25,12 @@
     /// 内环半径
     CGFloat _innerRadius;
 }
-
+/// 穴位 + 时辰
 @property (nonatomic, strong) NSArray <DialAnimationModel *> *dataSources;
-
+/// 中间的LOGO图片
 @property (nonatomic, strong) UIImageView *centerLogoImageView;
-
+/// 24h
+@property (nonatomic, strong) NSArray <NSNumber *> *twentyFourHour;
 
 @end
 
@@ -148,7 +149,7 @@
     if (!_centerLogoImageView) {
         _centerLogoImageView             = [[UIImageView alloc] init];
         _centerLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
-        _centerLogoImageView.image       = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"developer.png" ofType:nil]];
+        _centerLogoImageView.image       = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"logo-reddit.png" ofType:nil]];
     }
     return _centerLogoImageView;
 }
