@@ -10,7 +10,7 @@
 #import "UIColor+GYExtend.h"
 #import "DialAnimationModel.h"
 #import "SectorView.h"
-
+#import "CurvedView.h"
 
 
 @interface DialAnimationView ()
@@ -30,7 +30,7 @@
 /// 中间的LOGO图片
 @property (nonatomic, strong) UIImageView *centerLogoImageView;
 /// 24h
-@property (nonatomic, strong) NSArray <NSNumber *> *twentyFourHour;
+@property (nonatomic, strong) NSArray <NSString *> *twentyFourHour;
 
 @end
 
@@ -122,21 +122,36 @@
     _innerRadius        = radius - 20.f;
     
     // 角度
-    CGFloat angle       = M_PI * 2 / self.dataSources.count;
-
+    CGFloat bigAngle    = M_PI * 2 / self.dataSources.count;
+    // 24h 角度
+    CGFloat smalAngle   = M_PI * 2 / self.twentyFourHour.count;
+    
     // b2 = a2 + c2 - 2ac Cos(B)
-    CGFloat diagonal = sqrt((powf(_innerRadius, 2) + powf(_innerRadius, 2)) - 2*_innerRadius*_innerRadius*cos(angle));
+    CGFloat bigDiagonal   = sqrt((powf(_innerRadius, 2) + powf(_innerRadius, 2)) - 2*_innerRadius*_innerRadius*cos(bigAngle));
+    CGFloat smallDiagonal = sqrt((powf(radius, 2) + powf(radius, 2)) - 2*radius*radius*cos(smalAngle));
+    
+    for (int i = 0; i < self.twentyFourHour.count; i ++) {
+        NSString *hourString         = self.twentyFourHour[i];
+        CurvedView *curvedView       = [[CurvedView alloc] init];
+        curvedView.frame             = CGRectMake(0, 0, smallDiagonal, viewHeight);
+        curvedView.center            = centerPoint;
+        curvedView.angle             = smallDiagonal;
+        curvedView.backgroundColor   = (i % 2 == 0) ? [UIColor rgba:4325678964] : [UIColor rgba:4278190335];
+        curvedView.text              = hourString;
+        curvedView.transform         = CGAffineTransformMakeRotation(smalAngle * i);
+        [self addSubview:curvedView];
+    }
     
     for (int i = 0; i < self.dataSources.count; i ++) {
         DialAnimationModel *model          = self.dataSources[i];
-        SectorView *rectangleBGView        = [[SectorView alloc] initWithSize:CGSizeMake(diagonal, _innerRadius) angle:angle];
+        SectorView *rectangleBGView        = [[SectorView alloc] initWithSize:CGSizeMake(bigDiagonal, _innerRadius) angle:bigAngle];
         rectangleBGView.backgroundColor    = (i % 2 == 0) ? [UIColor rgba:4325678964] : [UIColor rgba:4278190335];
         rectangleBGView.center             = centerPoint;
-        rectangleBGView.transform          = CGAffineTransformMakeRotation(angle * i);
+        rectangleBGView.transform          = CGAffineTransformMakeRotation(bigAngle * i);
         rectangleBGView.model              = model;
         [self addSubview:rectangleBGView];
     }
-    
+
     self.centerLogoImageView.bounds = CGRectMake(0, 0, 120, 120);
     self.centerLogoImageView.center = centerPoint;
     [self bringSubviewToFront:self.centerLogoImageView];
@@ -153,7 +168,15 @@
     }
     return _centerLogoImageView;
 }
-
+- (NSArray <NSString *> *)twentyFourHour {
+    if (!_twentyFourHour) {
+        _twentyFourHour = @[
+            @"18",@"19",@"20",@"21",@"22",@"23",@"24",@"01",@"02",@"03",@"04",@"05",
+            @"06",@"07",@"08",@"09",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",
+        ];
+    }
+    return _twentyFourHour;
+}
 - (NSArray <DialAnimationModel *> *)dataSources {
     if (!_dataSources) {
         NSArray *sourceFile = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dialAnimationSource.plist" ofType:nil]];

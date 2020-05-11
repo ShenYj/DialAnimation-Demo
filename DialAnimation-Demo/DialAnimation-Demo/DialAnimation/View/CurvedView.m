@@ -30,6 +30,7 @@ CGFloat const kItemHeight = 25.f;  /// 高度
 - (void)setupContentView
 {
     self.backgroundColor  = [UIColor clearColor];
+    self.clipsToBounds    = YES;
     [self addSubview:self.contentLabel];
 }
 
