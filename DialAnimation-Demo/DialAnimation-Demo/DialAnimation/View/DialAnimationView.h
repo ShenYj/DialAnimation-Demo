@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DialAnimationView : UIView
 
+
+- (void)show;
+
 @end
 
 NS_ASSUME_NONNULL_END

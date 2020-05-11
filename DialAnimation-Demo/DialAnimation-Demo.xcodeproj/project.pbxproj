@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F76D16B524696C6300B20F88 /* CurvedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F76D16B424696C6300B20F88 /* CurvedView.m */; };
 		F7C2F0EA24657DD000BB44DB /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0E924657DD000BB44DB /* DemoViewController.m */; };
 		F7C2F0FF24657DD100BB44DB /* DialAnimation_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0FE24657DD100BB44DB /* DialAnimation_DemoTests.m */; };
 		F7C2F10A24657DD100BB44DB /* DialAnimation_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F10924657DD100BB44DB /* DialAnimation_DemoUITests.m */; };
@@ -16,7 +17,17 @@
 		F7C2F12B24657F2D00BB44DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11924657E3300BB44DB /* Assets.xcassets */; };
 		F7C2F12C24657F3100BB44DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11B24657E3300BB44DB /* LaunchScreen.storyboard */; };
 		F7C2F12D24657F3500BB44DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F11D24657E3300BB44DB /* Main.storyboard */; };
-		F7C2F134246582F100BB44DB /* DialAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F133246582F100BB44DB /* DialAnimationView.m */; };
+		F7C2F18D2465867C00BB44DB /* UIImageView+GYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F1402465867C00BB44DB /* UIImageView+GYExtension.m */; };
+		F7C2F1932465867C00BB44DB /* UIViewController+GYSystemAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F14D2465867C00BB44DB /* UIViewController+GYSystemAlert.m */; };
+		F7C2F1962465867C00BB44DB /* UIButton+GYInsensitiveTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F1542465867C00BB44DB /* UIButton+GYInsensitiveTouch.m */; };
+		F7C2F1972465867C00BB44DB /* UIButton+GYCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F1552465867C00BB44DB /* UIButton+GYCorner.m */; };
+		F7C2F1992465867C00BB44DB /* UIView+GYLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F15E2465867C00BB44DB /* UIView+GYLayout.m */; };
+		F7C2F1AB2465867C00BB44DB /* CALayer+GYShake.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F1832465867C00BB44DB /* CALayer+GYShake.m */; };
+		F7C2F1AC2465867C00BB44DB /* UIColor+GYExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F1872465867C00BB44DB /* UIColor+GYExtend.m */; };
+		F7C2F1B3246636DE00BB44DB /* DialAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F133246582F100BB44DB /* DialAnimationView.m */; };
+		F7C2F1B7246637D000BB44DB /* DialAnimationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F1B6246637D000BB44DB /* DialAnimationModel.m */; };
+		F7C2F1B92466390200BB44DB /* dialAnimationSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7C2F1B82466390200BB44DB /* dialAnimationSource.plist */; };
+		F7C2F1BC24664A6900BB44DB /* SectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F1BB24664A6900BB44DB /* SectorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F76D16B324696C6300B20F88 /* CurvedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurvedView.h; sourceTree = "<group>"; };
+		F76D16B424696C6300B20F88 /* CurvedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurvedView.m; sourceTree = "<group>"; };
 		F7C2F0DF24657DD000BB44DB /* DialAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DialAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C2F0E824657DD000BB44DB /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		F7C2F0E924657DD000BB44DB /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
@@ -57,6 +70,25 @@
 		F7C2F12224657E3300BB44DB /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		F7C2F132246582F100BB44DB /* DialAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialAnimationView.h; sourceTree = "<group>"; };
 		F7C2F133246582F100BB44DB /* DialAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialAnimationView.m; sourceTree = "<group>"; };
+		F7C2F13E2465867C00BB44DB /* UIImageView+GYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GYExtension.h"; sourceTree = "<group>"; };
+		F7C2F1402465867C00BB44DB /* UIImageView+GYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GYExtension.m"; sourceTree = "<group>"; };
+		F7C2F1432465867C00BB44DB /* CALayer+GYShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+GYShake.h"; sourceTree = "<group>"; };
+		F7C2F14D2465867C00BB44DB /* UIViewController+GYSystemAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GYSystemAlert.m"; sourceTree = "<group>"; };
+		F7C2F1532465867C00BB44DB /* UIButton+GYCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYCorner.h"; sourceTree = "<group>"; };
+		F7C2F1542465867C00BB44DB /* UIButton+GYInsensitiveTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GYInsensitiveTouch.m"; sourceTree = "<group>"; };
+		F7C2F1552465867C00BB44DB /* UIButton+GYCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GYCorner.m"; sourceTree = "<group>"; };
+		F7C2F1562465867C00BB44DB /* UIButton+GYInsensitiveTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+GYInsensitiveTouch.h"; sourceTree = "<group>"; };
+		F7C2F15D2465867C00BB44DB /* UIView+GYLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GYLayout.h"; sourceTree = "<group>"; };
+		F7C2F15E2465867C00BB44DB /* UIView+GYLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GYLayout.m"; sourceTree = "<group>"; };
+		F7C2F1832465867C00BB44DB /* CALayer+GYShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GYShake.m"; sourceTree = "<group>"; };
+		F7C2F1852465867C00BB44DB /* UIViewController+GYSystemAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GYSystemAlert.h"; sourceTree = "<group>"; };
+		F7C2F1872465867C00BB44DB /* UIColor+GYExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GYExtend.m"; sourceTree = "<group>"; };
+		F7C2F1882465867C00BB44DB /* UIColor+GYExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GYExtend.h"; sourceTree = "<group>"; };
+		F7C2F1B5246637D000BB44DB /* DialAnimationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialAnimationModel.h; sourceTree = "<group>"; };
+		F7C2F1B6246637D000BB44DB /* DialAnimationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialAnimationModel.m; sourceTree = "<group>"; };
+		F7C2F1B82466390200BB44DB /* dialAnimationSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dialAnimationSource.plist; sourceTree = "<group>"; };
+		F7C2F1BA24664A6900BB44DB /* SectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SectorView.h; sourceTree = "<group>"; };
+		F7C2F1BB24664A6900BB44DB /* SectorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SectorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C2F131246582D400BB44DB /* DialAnimation */,
+				F7C2F1352465867C00BB44DB /* Extension */,
 				F7C2F11724657E3300BB44DB /* SupportingFiles */,
 				F7C2F0E824657DD000BB44DB /* DemoViewController.h */,
 				F7C2F0E924657DD000BB44DB /* DemoViewController.m */,
@@ -152,10 +185,86 @@
 		F7C2F131246582D400BB44DB /* DialAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				F7C2F132246582F100BB44DB /* DialAnimationView.h */,
-				F7C2F133246582F100BB44DB /* DialAnimationView.m */,
+				F7C2F1B4246636F600BB44DB /* Model */,
+				F7C2F1B2246636CC00BB44DB /* View */,
 			);
 			path = DialAnimation;
+			sourceTree = "<group>";
+		};
+		F7C2F1352465867C00BB44DB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F1852465867C00BB44DB /* UIViewController+GYSystemAlert.h */,
+				F7C2F14D2465867C00BB44DB /* UIViewController+GYSystemAlert.m */,
+				F7C2F1432465867C00BB44DB /* CALayer+GYShake.h */,
+				F7C2F1832465867C00BB44DB /* CALayer+GYShake.m */,
+				F7C2F13D2465867C00BB44DB /* ImageView */,
+				F7C2F1522465867C00BB44DB /* Button */,
+				F7C2F15C2465867C00BB44DB /* View */,
+				F7C2F1862465867C00BB44DB /* Colour */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F7C2F13D2465867C00BB44DB /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F13E2465867C00BB44DB /* UIImageView+GYExtension.h */,
+				F7C2F1402465867C00BB44DB /* UIImageView+GYExtension.m */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		F7C2F1522465867C00BB44DB /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F1532465867C00BB44DB /* UIButton+GYCorner.h */,
+				F7C2F1552465867C00BB44DB /* UIButton+GYCorner.m */,
+				F7C2F1562465867C00BB44DB /* UIButton+GYInsensitiveTouch.h */,
+				F7C2F1542465867C00BB44DB /* UIButton+GYInsensitiveTouch.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		F7C2F15C2465867C00BB44DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F15D2465867C00BB44DB /* UIView+GYLayout.h */,
+				F7C2F15E2465867C00BB44DB /* UIView+GYLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7C2F1862465867C00BB44DB /* Colour */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F1882465867C00BB44DB /* UIColor+GYExtend.h */,
+				F7C2F1872465867C00BB44DB /* UIColor+GYExtend.m */,
+			);
+			path = Colour;
+			sourceTree = "<group>";
+		};
+		F7C2F1B2246636CC00BB44DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F132246582F100BB44DB /* DialAnimationView.h */,
+				F7C2F133246582F100BB44DB /* DialAnimationView.m */,
+				F7C2F1BA24664A6900BB44DB /* SectorView.h */,
+				F7C2F1BB24664A6900BB44DB /* SectorView.m */,
+				F76D16B324696C6300B20F88 /* CurvedView.h */,
+				F76D16B424696C6300B20F88 /* CurvedView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7C2F1B4246636F600BB44DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7C2F1B82466390200BB44DB /* dialAnimationSource.plist */,
+				F7C2F1B5246637D000BB44DB /* DialAnimationModel.h */,
+				F7C2F1B6246637D000BB44DB /* DialAnimationModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +372,7 @@
 			files = (
 				F7C2F12D24657F3500BB44DB /* Main.storyboard in Resources */,
 				F7C2F12C24657F3100BB44DB /* LaunchScreen.storyboard in Resources */,
+				F7C2F1B92466390200BB44DB /* dialAnimationSource.plist in Resources */,
 				F7C2F12B24657F2D00BB44DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,11 +398,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C2F134246582F100BB44DB /* DialAnimationView.m in Sources */,
+				F7C2F1B3246636DE00BB44DB /* DialAnimationView.m in Sources */,
+				F7C2F1932465867C00BB44DB /* UIViewController+GYSystemAlert.m in Sources */,
+				F7C2F1992465867C00BB44DB /* UIView+GYLayout.m in Sources */,
+				F7C2F1962465867C00BB44DB /* UIButton+GYInsensitiveTouch.m in Sources */,
+				F7C2F1AB2465867C00BB44DB /* CALayer+GYShake.m in Sources */,
 				F7C2F12824657E3300BB44DB /* AppDelegate.m in Sources */,
+				F7C2F1BC24664A6900BB44DB /* SectorView.m in Sources */,
+				F76D16B524696C6300B20F88 /* CurvedView.m in Sources */,
+				F7C2F18D2465867C00BB44DB /* UIImageView+GYExtension.m in Sources */,
 				F7C2F0EA24657DD000BB44DB /* DemoViewController.m in Sources */,
 				F7C2F12724657E3300BB44DB /* main.m in Sources */,
+				F7C2F1AC2465867C00BB44DB /* UIColor+GYExtend.m in Sources */,
+				F7C2F1B7246637D000BB44DB /* DialAnimationModel.m in Sources */,
 				F7C2F12424657E3300BB44DB /* SceneDelegate.m in Sources */,
+				F7C2F1972465867C00BB44DB /* UIButton+GYCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,13 +584,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R34S373N7;
+				DEVELOPMENT_TEAM = KS5QTFAS57;
 				INFOPLIST_FILE = "DialAnimation-Demo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.ShenYj.DialAnimation-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.ShenYj.DialAnimation.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,13 +601,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R34S373N7;
+				DEVELOPMENT_TEAM = KS5QTFAS57;
 				INFOPLIST_FILE = "DialAnimation-Demo/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.ShenYj.DialAnimation-Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.ShenYj.DialAnimation.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
