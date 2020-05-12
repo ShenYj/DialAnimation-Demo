@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F76D16B524696C6300B20F88 /* CurvedView.m in Sources */ = {isa = PBXBuildFile; fileRef = F76D16B424696C6300B20F88 /* CurvedView.m */; };
-		F76D16BC246983DE00B20F88 /* logo-reddit.png in Resources */ = {isa = PBXBuildFile; fileRef = F76D16BB246983DE00B20F88 /* logo-reddit.png */; };
+		F76D16BE246A28E300B20F88 /* iosbodyoutline.png in Resources */ = {isa = PBXBuildFile; fileRef = F76D16BD246A28E300B20F88 /* iosbodyoutline.png */; };
 		F7C2F0EA24657DD000BB44DB /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0E924657DD000BB44DB /* DemoViewController.m */; };
 		F7C2F0FF24657DD100BB44DB /* DialAnimation_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F0FE24657DD100BB44DB /* DialAnimation_DemoTests.m */; };
 		F7C2F10A24657DD100BB44DB /* DialAnimation_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C2F10924657DD100BB44DB /* DialAnimation_DemoUITests.m */; };
@@ -51,7 +51,7 @@
 /* Begin PBXFileReference section */
 		F76D16B324696C6300B20F88 /* CurvedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurvedView.h; sourceTree = "<group>"; };
 		F76D16B424696C6300B20F88 /* CurvedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurvedView.m; sourceTree = "<group>"; };
-		F76D16BB246983DE00B20F88 /* logo-reddit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-reddit.png"; sourceTree = "<group>"; };
+		F76D16BD246A28E300B20F88 /* iosbodyoutline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iosbodyoutline.png; sourceTree = "<group>"; };
 		F7C2F0DF24657DD000BB44DB /* DialAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DialAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C2F0E824657DD000BB44DB /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		F7C2F0E924657DD000BB44DB /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		F76D16B624697A2300B20F88 /* Img */ = {
 			isa = PBXGroup;
 			children = (
-				F76D16BB246983DE00B20F88 /* logo-reddit.png */,
+				F76D16BD246A28E300B20F88 /* iosbodyoutline.png */,
 			);
 			path = Img;
 			sourceTree = "<group>";
@@ -383,7 +383,7 @@
 			files = (
 				F7C2F12D24657F3500BB44DB /* Main.storyboard in Resources */,
 				F7C2F12C24657F3100BB44DB /* LaunchScreen.storyboard in Resources */,
-				F76D16BC246983DE00B20F88 /* logo-reddit.png in Resources */,
+				F76D16BE246A28E300B20F88 /* iosbodyoutline.png in Resources */,
 				F7C2F1B92466390200BB44DB /* dialAnimationSource.plist in Resources */,
 				F7C2F12B24657F2D00BB44DB /* Assets.xcassets in Resources */,
 			);

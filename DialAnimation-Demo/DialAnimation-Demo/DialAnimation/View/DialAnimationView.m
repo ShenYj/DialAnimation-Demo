@@ -24,6 +24,8 @@
     CGRect _drawRect;
     /// 内环半径
     CGFloat _innerRadius;
+    /// 中心点
+    CGPoint _centerPoint;
 }
 /// 穴位 + 时辰
 @property (nonatomic, strong) NSArray <DialAnimationModel *> *dataSources;
@@ -31,6 +33,9 @@
 @property (nonatomic, strong) UIImageView *centerLogoImageView;
 /// 24h
 @property (nonatomic, strong) NSArray <NSString *> *twentyFourHour;
+
+@property (nonatomic, assign) CGPoint startPoint;
+@property (nonatomic, assign) CGPoint movingPoint;
 
 @end
 
@@ -51,40 +56,40 @@
     self.clipsToBounds   = YES;
     [self addSubview:self.centerLogoImageView];
     
-    UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self
-                                                                                       action:@selector(targetForSwipeGesture:)];
-    swipeGesture.direction                 = UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionLeft | UISwipeGestureRecognizerDirectionUp | UISwipeGestureRecognizerDirectionDown;
-    [self addGestureRecognizer:swipeGesture];
+    UILongPressGestureRecognizer *longPressGes = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(targetForLongPressGesture:)];
+    longPressGes.minimumPressDuration          = 0.1f;
+    longPressGes.numberOfTouchesRequired       = 1;
+    [self addGestureRecognizer:longPressGes];
 }
 
-//    NSArray *titleWArr1 = @[@"17", @"18", @"19", @"20", @"21", @"22", @"23",@"24", @"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", @"13", @"14", @"15", @"16"];
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"%s", __func__);
-}
-- (void)targetForSwipeGesture:(UISwipeGestureRecognizer *)gesture
+- (void)targetForLongPressGesture:(UISwipeGestureRecognizer *)gesture
 {
     NSLog(@"%s", __func__);
     switch (gesture.state) {
         case UIGestureRecognizerStateBegan: {
-            NSLog(@"UIGestureRecognizerStateBegan");
             CGPoint point = [gesture locationInView:self];
-           
+            self.startPoint = point;
+            NSLog(@"UIGestureRecognizerStateBegan: %@", NSStringFromCGPoint(point));
         }
             break;
         case UIGestureRecognizerStateChanged: {
-            NSLog(@"UIGestureRecognizerStateChanged");
             CGPoint point = [gesture locationInView:self];
-            
+            self.movingPoint = point;
+            NSLog(@"UIGestureRecognizerStateChanged: %@", NSStringFromCGPoint(point));
+            CGFloat angle = angleBetweenPoints(self.startPoint, self.movingPoint);
+            [self animate:angle moving:YES];
         }
             break;
         case UIGestureRecognizerStateEnded: {
-            NSLog(@"UIGestureRecognizerStateEnded");
-            
+            CGPoint point = [gesture locationInView:self];
+            NSLog(@"UIGestureRecognizerStateEnded: %@", NSStringFromCGPoint(point));
+            CGFloat angle = angleBetweenPoints(self.startPoint, point);
+            [self animate:angle moving:NO];
         }
             break;
-        default:
+        default: {
+            NSLog(@"Other");
+        }
             break;
     }
 }
@@ -94,6 +99,7 @@
     _drawRect           = rect;
     CGFloat radius      = MIN(rect.size.width * 0.5, rect.size.height * 0.5);
     CGPoint centerPoint = CGPointMake(rect.size.width * 0.5, rect.size.height * 0.5);
+    _centerPoint        = centerPoint;
     UIBezierPath *path  = [UIBezierPath bezierPathWithArcCenter:centerPoint
                                                          radius:radius
                                                      startAngle:0
@@ -152,11 +158,42 @@
         [self addSubview:rectangleBGView];
     }
 
-    self.centerLogoImageView.bounds = CGRectMake(0, 0, 120, 120);
+    self.centerLogoImageView.bounds = CGRectMake(0, 0, radius, radius);
     self.centerLogoImageView.center = centerPoint;
     [self bringSubviewToFront:self.centerLogoImageView];
 }
 
+- (void)animate:(CGFloat)angle moving:(BOOL)moving
+{
+    CFTimeInterval duration     = moving ? 0.1f : 3.f;
+    CABasicAnimation *rotation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotation.duration           = duration;
+    rotation.fromValue          = @(0);
+    rotation.byValue            = @(angle);
+    [self.layer addAnimation:rotation forKey:nil];
+}
+
+
+CGFloat distanceBetweenPoints (CGPoint first, CGPoint second) {
+    CGFloat deltaX = second.x - first.x;
+    CGFloat deltaY = second.y - first.y;
+    return sqrt(deltaX*deltaX + deltaY*deltaY );
+};
+CGFloat angleBetweenPoints(CGPoint first, CGPoint second) {
+    CGFloat height = second.y - first.y;
+    CGFloat width = first.x - second.x;
+    CGFloat rads = atan(height/width);
+    return RADIANS_TO_DEGREES(rads);
+    //degs = degrees(atan((top - bottom)/(right - left)))
+}
+CGFloat angleBetweenLines(CGPoint line1Start, CGPoint line1End, CGPoint line2Start, CGPoint line2End) {
+    CGFloat a = line1End.x - line1Start.x;
+    CGFloat b = line1End.y - line1Start.y;
+    CGFloat c = line2End.x - line2Start.x;
+    CGFloat d = line2End.y - line2Start.y;
+    CGFloat rads = acos(((a*c) + (b*d)) / ((sqrt(a*a + b*b)) * (sqrt(c*c + d*d))));
+    return RADIANS_TO_DEGREES(rads);
+}
 
 #pragma mark - lazy
 
@@ -164,7 +201,7 @@
     if (!_centerLogoImageView) {
         _centerLogoImageView             = [[UIImageView alloc] init];
         _centerLogoImageView.contentMode = UIViewContentModeScaleAspectFit;
-        _centerLogoImageView.image       = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"logo-reddit.png" ofType:nil]];
+        _centerLogoImageView.image       = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"iosbodyoutline.png" ofType:nil]];
     }
     return _centerLogoImageView;
 }
