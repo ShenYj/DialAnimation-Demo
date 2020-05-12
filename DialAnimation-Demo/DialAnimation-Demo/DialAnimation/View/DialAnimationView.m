@@ -13,7 +13,7 @@
 #import "CurvedView.h"
 
 
-@interface DialAnimationView ()
+@interface DialAnimationView () <CAAnimationDelegate>
 {
     /// 角度
     CGFloat _angle;
@@ -172,7 +172,18 @@
     rotation.byValue             = @(angle);
     rotation.removedOnCompletion = NO;
     rotation.fillMode            = kCAFillModeForwards;
+    if (!moving) {
+        rotation.delegate        = self;
+    }
     [self.layer addAnimation:rotation forKey:nil];
+}
+
+
+#pragma mark - CAAnimationDelegate
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    NSLog(@"动画停止 归位: %d", flag);
 }
 
 
