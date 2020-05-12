@@ -165,11 +165,13 @@
 
 - (void)animate:(CGFloat)angle moving:(BOOL)moving
 {
-    CFTimeInterval duration     = moving ? 0.1f : 3.f;
-    CABasicAnimation *rotation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-    rotation.duration           = duration;
-    rotation.fromValue          = @(0);
-    rotation.byValue            = @(angle);
+    CFTimeInterval duration      = moving ? 0.1f : 3.f;
+    CABasicAnimation *rotation   = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotation.duration            = duration;
+    rotation.fromValue           = @(0);
+    rotation.byValue             = @(angle);
+    rotation.removedOnCompletion = NO;
+    rotation.fillMode            = kCAFillModeForwards;
     [self.layer addAnimation:rotation forKey:nil];
 }
 
